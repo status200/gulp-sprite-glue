@@ -148,7 +148,7 @@ function parseOption(key,value) {
         grunt.log.warn('Not found command ' + key + '(' + value + ')');
         return;
     }
-    if (!value || value === false) {
+    if ((!value || value === false) && value !== "") {
         return;
     }
     if (/^(caat|html|json|less|scss|cocos2d)$/.test(key)) {
