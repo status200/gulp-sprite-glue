@@ -145,7 +145,7 @@ function glue(dest,options) {
 function parseOption(key,value) {
     var val = COMMANDS[key];
     if (!val) {
-        grunt.log.warn('Not found command ' + key + '(' + value + ')');
+        console.log('Not found command ' + key + '(' + value + ')');
         return;
     }
     if ((!value || value === false) && value !== "") {
